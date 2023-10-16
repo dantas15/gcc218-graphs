@@ -34,3 +34,6 @@
 # Data stuff
 *.csv
 *.bin
+
+# Unused IDE files
+.idea
