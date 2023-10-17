@@ -31,14 +31,15 @@ int main() {
       cin >> u >> v; // reading all edges (u <-> v)
 
       // avoiding repeated vertices and updating their degree (or valency)
-      if (find(adjList[u].begin(), adjList[u].end(), v) == adjList[u].end()) {
-        // in the case of undirected graphs
-        adjList[u].push_back(v); // u -> v
-        adjList[v].push_back(u); // v -> u
+      if (find(adjList[u].begin(), adjList[u].end(), v) != adjList[u].end())
+        continue;
 
-        degree[u]++;
-        degree[v]++;
-      }
+      // in the case of undirected graphs
+      adjList[u].push_back(v); // u -> v
+      adjList[v].push_back(u); // v -> u
+
+      degree[u]++;
+      degree[v]++;
     }
 
     // PQ with everyone with less than K friends
