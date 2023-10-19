@@ -8,6 +8,11 @@
     "*.module": "php",
     "iostream": "cpp",
     "ostream": "cpp",
-    "new": "cpp"
+    "new": "cpp",
+    "*.tcc": "cpp",
+    "deque": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp"
   }
 }
